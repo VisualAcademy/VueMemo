@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Hello {{title}}</h1>
+        <input type="text" v-model="title" />
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    title: '뷰제이에스'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
