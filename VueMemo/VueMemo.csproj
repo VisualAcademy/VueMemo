@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-VueMemo-09156936-21F1-4E99-88FA-4C9523D27FC4</UserSecretsId>
+	<SpaRoot>ClientApp\</SpaRoot>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,4 +14,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6" />
   </ItemGroup>
 
+    <Target Name="VueJsBuild" BeforeTargets="Build">
+	    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+	    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+    </Target>	
+	
 </Project>
